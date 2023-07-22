@@ -25,14 +25,13 @@
   ],
   "scripts": {
     "build": "rollup --config",
-    "copyDoc": "cp ../../*.md .",
     "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
     "lint:fix": "concurrently \"npm:lint:*:fix\" --names \"fix:\"",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "start": "rollup --config --watch",
     "test": "echo 'A v2 addon does not have tests, run tests in test-app'",
-    "prepare": "concurrently \"npm:copyDoc\" \"npm:build\""
+    "prepare": "concurrently \"npm:build\""
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.8.5"
